@@ -1,10 +1,10 @@
-using System.Windows.Forms.DataVisualization.Charting;
+п»їusing System.Windows.Forms.DataVisualization.Charting;
 
 namespace lab1
 {
     public partial class Form1 : Form
     {
-        decimal C = 0.15m, p = 1.29m, g = 9.81m, dt; // C - коэффициент лобового сопротивления, p - плотность воздуха 
+        decimal C = 0.15m, p = 1.29m, g = 9.81m, dt; // C - РєРѕСЌС„С„РёС†РёРµРЅС‚ Р»РѕР±РѕРІРѕРіРѕ СЃРѕРїСЂРѕС‚РёРІР»РµРЅРёСЏ, p - РїР»РѕС‚РЅРѕСЃС‚СЊ РІРѕР·РґСѓС…Р° 
         decimal x, y, m, S, t, v0, cosa, sina, vx, k, vy, max_y;
         int count = 0;
 
@@ -33,7 +33,7 @@ namespace lab1
                 t = 0; x = 0;
 
                 dt = Step.Value;
-                S = Size.Value; // площадь поперечного сечения тела
+                S = Size.Value; // РїР»РѕС‰Р°РґСЊ РїРѕРїРµСЂРµС‡РЅРѕРіРѕ СЃРµС‡РµРЅРёСЏ С‚РµР»Р°
                 m = Weight.Value;
                 y = Height.Value;
                 v0 = Speed.Value;
@@ -53,7 +53,7 @@ namespace lab1
                 Series new_series = new Series();
                 new_series.ChartType = SeriesChartType.Line;
                 new_series.BorderWidth = 4;
-                new_series.Name = $"График {count + 1}";
+                new_series.Name = $"Р“СЂР°С„РёРє {count + 1}";
                 chart1.Series.Add(new_series);
 
                 chart1.Series[count].Color = Colors[count];
@@ -92,11 +92,11 @@ namespace lab1
             if (y <= 0)
             {
                 timer1.Enabled = false;
-                listBox1.Items.Add($"График: {count+1}");
-                listBox1.Items.Add($"Шаг: {dt:F3}");
-                listBox1.Items.Add($"Дальность полета: {x:F3}");
-                listBox1.Items.Add($"Максимальная высота: {max_y:F3}");
-                listBox1.Items.Add($"Максимальная скорость в конечной точке: {v:F3}\n\n");
+                listBox1.Items.Add($"Р“СЂР°С„РёРє: {count+1}");
+                listBox1.Items.Add($"РЁР°Рі: {dt:F3}");
+                listBox1.Items.Add($"Р”Р°Р»СЊРЅРѕСЃС‚СЊ РїРѕР»РµС‚Р°: {x:F3}");
+                listBox1.Items.Add($"РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹СЃРѕС‚Р°: {max_y:F3}");
+                listBox1.Items.Add($"РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РІ РєРѕРЅРµС‡РЅРѕР№ С‚РѕС‡РєРµ: {v:F3}\n\n");
                 listBox1.Items.Add("");
                 count += 1;
             }
