@@ -53,7 +53,7 @@ namespace lab1
                 Series new_series = new Series();
                 new_series.ChartType = SeriesChartType.Line;
                 new_series.BorderWidth = 4;
-                new_series.Name = $"График {count + 1}";
+                new_series.Name = $"График {count + 1}, Шаг: {dt:F4}";
                 chart1.Series.Add(new_series);
 
                 chart1.Series[count].Color = Colors[count];
@@ -93,10 +93,10 @@ namespace lab1
             {
                 timer1.Enabled = false;
                 listBox1.Items.Add($"График: {count+1}");
-                listBox1.Items.Add($"Шаг: {dt:F3}");
+                listBox1.Items.Add($"Шаг: {dt:F4}");
                 listBox1.Items.Add($"Дальность полета: {x:F3}");
                 listBox1.Items.Add($"Максимальная высота: {max_y:F3}");
-                listBox1.Items.Add($"Максимальная скорость в конечной точке: {v:F3}\n\n");
+                listBox1.Items.Add($"Скорость в конечной точке: {v:F3}\n\n");
                 listBox1.Items.Add("");
                 count += 1;
             }
