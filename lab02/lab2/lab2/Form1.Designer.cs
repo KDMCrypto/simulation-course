@@ -49,6 +49,12 @@
             label7 = new Label();
             T_door = new NumericUpDown();
             listBox1 = new ListBox();
+            label8 = new Label();
+            ct = new NumericUpDown();
+            label9 = new Label();
+            pl = new NumericUpDown();
+            label10 = new Label();
+            lt = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Step_t).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Step_space).BeginInit();
@@ -57,6 +63,9 @@
             ((System.ComponentModel.ISupportInitialize)t_right).BeginInit();
             ((System.ComponentModel.ISupportInitialize)t_left).BeginInit();
             ((System.ComponentModel.ISupportInitialize)T_door).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ct).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pl).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lt).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -77,7 +86,7 @@
             legend1.Enabled = false;
             legend1.Name = "Legend1";
             chart1.Legends.Add(legend1);
-            chart1.Location = new Point(25, 393);
+            chart1.Location = new Point(24, 397);
             chart1.Name = "chart1";
             series1.BorderWidth = 4;
             series1.ChartArea = "ChartArea1";
@@ -86,7 +95,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chart1.Series.Add(series1);
-            chart1.Size = new Size(1019, 610);
+            chart1.Size = new Size(1020, 606);
             chart1.TabIndex = 1;
             chart1.Text = "chart1";
             // 
@@ -240,10 +249,67 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 25;
-            listBox1.Location = new Point(284, 258);
+            listBox1.Location = new Point(542, 258);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(502, 129);
             listBox1.TabIndex = 17;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(37, 312);
+            label8.Name = "label8";
+            label8.Size = new Size(130, 25);
+            label8.TabIndex = 23;
+            label8.Text = "Теплоемкость:";
+            // 
+            // ct
+            // 
+            ct.DecimalPlaces = 1;
+            ct.Location = new Point(240, 310);
+            ct.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            ct.Name = "ct";
+            ct.Size = new Size(112, 31);
+            ct.TabIndex = 22;
+            ct.Value = new decimal(new int[] { 385, 0, 0, 0 });
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(37, 258);
+            label9.Name = "label9";
+            label9.Size = new Size(193, 25);
+            label9.TabIndex = 21;
+            label9.Text = "Плотнойсть вещества:";
+            // 
+            // pl
+            // 
+            pl.DecimalPlaces = 1;
+            pl.Location = new Point(240, 256);
+            pl.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+            pl.Name = "pl";
+            pl.Size = new Size(112, 31);
+            pl.TabIndex = 20;
+            pl.Value = new decimal(new int[] { 8900, 0, 0, 0 });
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(37, 360);
+            label10.Name = "label10";
+            label10.Size = new Size(172, 25);
+            label10.TabIndex = 19;
+            label10.Text = "Теплопроводность:";
+            // 
+            // lt
+            // 
+            lt.DecimalPlaces = 1;
+            lt.Location = new Point(240, 360);
+            lt.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            lt.Name = "lt";
+            lt.Size = new Size(112, 31);
+            lt.TabIndex = 18;
+            lt.Value = new decimal(new int[] { 385, 0, 0, 0 });
             // 
             // Form1
             // 
@@ -251,6 +317,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(1071, 1015);
+            Controls.Add(label8);
+            Controls.Add(ct);
+            Controls.Add(label9);
+            Controls.Add(pl);
+            Controls.Add(label10);
+            Controls.Add(lt);
             Controls.Add(listBox1);
             Controls.Add(label7);
             Controls.Add(T_door);
@@ -279,6 +351,9 @@
             ((System.ComponentModel.ISupportInitialize)t_right).EndInit();
             ((System.ComponentModel.ISupportInitialize)t_left).EndInit();
             ((System.ComponentModel.ISupportInitialize)T_door).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ct).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pl).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lt).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -303,5 +378,11 @@
         private Label label7;
         private NumericUpDown T_door;
         private ListBox listBox1;
+        private Label label8;
+        private NumericUpDown ct;
+        private Label label9;
+        private NumericUpDown pl;
+        private Label label10;
+        private NumericUpDown lt;
     }
 }

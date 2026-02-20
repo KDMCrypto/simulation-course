@@ -5,7 +5,8 @@ namespace lab2
 {
     public partial class Form1 : Form
     {
-        int p = 8900, c = 385, lambda = 385; // медь  // int p = 7800, c = 460, lambda = 46; сталь              
+        //int p = 8900, c = 385, lambda = 385; // медь  // int p = 7800, c = 460, lambda = 46; сталь              
+        double p, c, lambda;
         double time, L, h, tau, A, C, B;
         double TL, TN, T0, F;
         public Form1()
@@ -40,6 +41,9 @@ namespace lab2
             TN = (double)t_right.Value; // температура справа от двери 
             T0 = (double)T_door.Value; // температура двери исходная
 
+            p = (double)pl.Value; // плотность вещества
+            c = (double)ct.Value; // удельная теплоемкость
+            lambda = (double)lt.Value; // теплопроводность
 
             int steps = (int)(L / h) + 1; // шаги по сетке 
             int st_time = (int)(time / tau) + 1; // число временных меток
@@ -110,6 +114,7 @@ namespace lab2
         {
             this.Close();
         }
+
 
     }
 }
