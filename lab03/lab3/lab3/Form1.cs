@@ -37,8 +37,8 @@ namespace lab3
             int[,] X1 = new int[rows, cols];
 
             // Константы вероятностей 
-            double p_d = p / 100.0; // p
-            double f_d = f / 100.0;     // f
+            double p_d = p / 100.0; 
+            double f_d = f / 100.0; 
             double Diagonal_prob = 0.6;
 
             for (int iy = 1; iy < rows - 1; iy++)

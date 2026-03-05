@@ -67,7 +67,7 @@
             rows.Name = "rows";
             rows.Size = new Size(180, 31);
             rows.TabIndex = 1;
-            rows.Value = new decimal(new int[] { 50, 0, 0, 0 });
+            rows.Value = new decimal(new int[] { 100, 0, 0, 0 });
             rows.ValueChanged += rows_ValueChanged;
             // 
             // columns
@@ -79,7 +79,7 @@
             columns.Name = "columns";
             columns.Size = new Size(180, 31);
             columns.TabIndex = 2;
-            columns.Value = new decimal(new int[] { 50, 0, 0, 0 });
+            columns.Value = new decimal(new int[] { 100, 0, 0, 0 });
             columns.ValueChanged += columns_ValueChanged;
             columns.Paint += pictureBox1_Paint;
             // 
@@ -168,6 +168,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(1379, 1242);
             Controls.Add(button2);
             Controls.Add(label4);
