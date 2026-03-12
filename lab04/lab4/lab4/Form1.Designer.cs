@@ -87,7 +87,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLight;
+            BackColor = SystemColors.Info;
             ClientSize = new Size(822, 336);
             Controls.Add(label1);
             Controls.Add(listBox1);

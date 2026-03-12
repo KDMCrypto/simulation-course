@@ -73,6 +73,7 @@ namespace lab4
 
         public Int128 NextInt()
         {
+
             X = (Beta * X) % M;
             return X;
         }
