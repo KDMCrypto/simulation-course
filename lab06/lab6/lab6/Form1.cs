@@ -57,6 +57,7 @@ namespace lab6
 
             DRV_simulator simulator = new DRV_simulator();
 
+            // Считываем данные с таблицы
             for (int i = 0; i < m; i++)
             {
                 var value = dataGridView1.Rows[i].Cells[1].Value;
@@ -165,8 +166,7 @@ namespace lab6
             for (int i = 0; i < N_2; i++) sumSqDiff += Math.Pow(data[i] - M_emp, 2);
             double D_emp = sumSqDiff / N_2;
 
-            
-            int k = (int)Math.Floor(1 + 3.322 * Math.Log10(N_2)); // подсчет кол-ва диапазонов
+            int k = (int)Math.Floor(1 + Math.Log2(N_2)); // подсчет кол-ва диапазонов формула Стерджеса
             if (k < 5) k = 5;
 
             // границы интервалов
@@ -197,7 +197,7 @@ namespace lab6
                 double right = left + h;
                 double mid = left + h / 2;
 
-                // Теоретическая вероятность попадания в интервал. Используем упрощенную формулу через плотность в середине интервала
+                // Теоретическая вероятность попадания в интервал. Использую упрощенную формулу через плотность в середине интервала
                 double p_theor = (1.0 / (Math.Sqrt(var_2) * Math.Sqrt(2 * Math.PI))) * Math.Exp(-Math.Pow(mid - mean_2, 2) / (2 * var_2)) * h;
 
                 if (p_theor > 0)
