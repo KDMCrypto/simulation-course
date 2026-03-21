@@ -102,7 +102,7 @@ namespace lab7
             // Запуск таймера
             timer1.Start();
 
-            // Блокируем кнопку
+            // Блокируем кнопки
             Start.Enabled = false;
             save_button.Enabled = false;
         }
