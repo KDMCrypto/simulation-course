@@ -38,7 +38,7 @@ namespace lab7
             foreach (var s in chart1.Series)
                 s.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
 
-            timer1.Interval = 500;
+            timer1.Interval = 200;
             timer1.Tick += Timer_Tick;
 
             // чтобы автоматически диагональные элементы менялись
