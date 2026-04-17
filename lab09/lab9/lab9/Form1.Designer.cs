@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             start_button = new Button();
             lambda_form = new NumericUpDown();
             mu_form = new NumericUpDown();
@@ -39,12 +36,10 @@
             label2 = new Label();
             N_form = new NumericUpDown();
             button1 = new Button();
-            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             listBox1 = new ListBox();
             ((System.ComponentModel.ISupportInitialize)lambda_form).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mu_form).BeginInit();
             ((System.ComponentModel.ISupportInitialize)N_form).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             SuspendLayout();
             // 
             // start_button
@@ -53,7 +48,7 @@
             start_button.FlatStyle = FlatStyle.Popup;
             start_button.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
             start_button.ForeColor = SystemColors.Window;
-            start_button.Location = new Point(923, 729);
+            start_button.Location = new Point(500, 344);
             start_button.Name = "start_button";
             start_button.Size = new Size(112, 46);
             start_button.TabIndex = 0;
@@ -122,7 +117,7 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
             button1.ForeColor = SystemColors.Window;
-            button1.Location = new Point(995, 23);
+            button1.Location = new Point(574, 23);
             button1.Name = "button1";
             button1.Size = new Size(40, 40);
             button1.TabIndex = 8;
@@ -130,38 +125,21 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chart1.Legends.Add(legend1);
-            chart1.Location = new Point(23, 210);
-            chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chart1.Series.Add(series1);
-            chart1.Size = new Size(623, 565);
-            chart1.TabIndex = 9;
-            chart1.Text = "chart1";
-            // 
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 25;
-            listBox1.Location = new Point(671, 210);
+            listBox1.Location = new Point(23, 211);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(364, 179);
+            listBox1.Size = new Size(383, 179);
             listBox1.TabIndex = 10;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1047, 798);
+            ClientSize = new Size(624, 406);
             Controls.Add(listBox1);
-            Controls.Add(chart1);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(N_form);
@@ -175,7 +153,6 @@
             ((System.ComponentModel.ISupportInitialize)lambda_form).EndInit();
             ((System.ComponentModel.ISupportInitialize)mu_form).EndInit();
             ((System.ComponentModel.ISupportInitialize)N_form).EndInit();
-            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -190,7 +167,6 @@
         private Label label2;
         private NumericUpDown N_form;
         private Button button1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private ListBox listBox1;
     }
 }
